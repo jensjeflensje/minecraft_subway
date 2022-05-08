@@ -1,0 +1,9 @@
+name: Subway
+version: '${project.version}'
+main: dev.jensderuiter.subway.SubwayPlugin
+authors: [ jensjeflensje ]
+description: Subway in Minecraft
+commands:
+  subway:
+    usage: /subway
+    description: Main command for spawning and editing subway configurations.
