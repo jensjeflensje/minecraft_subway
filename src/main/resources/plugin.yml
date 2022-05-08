@@ -1,8 +1,8 @@
-name: Subway
+name: Subways
 version: '${project.version}'
 main: dev.jensderuiter.subway.SubwayPlugin
 authors: [ jensjeflensje ]
-description: Subway in Minecraft
+description: Subways/Trams in Minecraft
 commands:
   subway:
     usage: /subway
