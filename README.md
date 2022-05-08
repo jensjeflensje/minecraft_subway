@@ -32,6 +32,3 @@ It was made with the default Minecraft texture pack in mind. Some texture packs 
 
 ### Contributing
 Feel free to contribute! It's very easy to add new trams/subways/vehicles to the system, so please do, and create a PR of course :).
-
-### Demo
-Watch the demo [here](https://www.youtube.com/watch?v=blE-pjqZLmo).
