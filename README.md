@@ -30,5 +30,11 @@ It was made with the default Minecraft texture pack in mind. Some texture packs 
 - (not strictly necessary) Set whether a subway should be spawned on start/reload of the server with `/subway setautospawn <track> <true or false>`.
 - Restart the server (if autospawn is on) or manually spawn a subway with `/subway spawn <track>`.
 
+### Permissions
+There's only one permission to configure subways: `subway.admin`. There will probably be other permissions later on.
+
 ### Contributing
 Feel free to contribute! It's very easy to add new trams/subways/vehicles to the system, so please do, and create a PR of course :).
+
+### Demo
+Watch the demo [here](https://www.youtube.com/watch?v=blE-pjqZLmo).
