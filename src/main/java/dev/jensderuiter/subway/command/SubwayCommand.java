@@ -29,6 +29,11 @@ public class SubwayCommand implements CommandExecutor {
         player.sendMessage("/subway remove <track>");
     }
 
+    private void sendNoPermission(Player player) {
+        player.sendMessage("Subways - By Jens de Ruiter (jensjeflensje)");
+        player.sendMessage("Copyright 2022, Licensed under the MIT License");
+    }
+
     private void sendSuccess(Player player, String message) {
         player.sendMessage(ChatColor.GREEN + message);
     }
@@ -41,6 +46,10 @@ public class SubwayCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
+            if (!player.hasPermission("subway.admin")) {
+                sendNoPermission(player);
+                return true;
+            }
             if (args.length <= 1) {
                 sendHelp(player);
                 return true;
