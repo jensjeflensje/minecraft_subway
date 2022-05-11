@@ -95,6 +95,15 @@ public abstract class BaseSubway implements Subway {
             Component component = entry.getValue();
             if (component instanceof SeatComponent) {
                 SeatComponent seat = (SeatComponent) component;
+                if (seat.getPassenger() == player) {
+                    return true;
+                }
+            }
+        }
+        for (Map.Entry<String, Component> entry : components.entrySet()) {
+            Component component = entry.getValue();
+            if (component instanceof SeatComponent) {
+                SeatComponent seat = (SeatComponent) component;
                 if (seat.isTaken()) continue;
                 seat.setPassenger(player);
                 return true;
