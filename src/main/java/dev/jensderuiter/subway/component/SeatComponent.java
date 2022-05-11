@@ -67,7 +67,10 @@ public class SeatComponent implements Component {
     }
 
     public Player getPassenger() {
-        return (Player) this.armorStand.getPassengers().get(0);
+        if (this.armorStand.getPassengers().size() >= 1) {
+            return (Player) this.armorStand.getPassengers().get(0);
+        }
+        return null;
     }
 
     public void setPassenger(Player passenger) {
