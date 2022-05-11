@@ -154,7 +154,7 @@ public class SubwayCommand implements CommandExecutor {
                     Track track = Utils.getTrackFromConfig(args[1]);
                     if (track == null) {
                         sendError(player, "Track not found");
-                        return true;
+                        break;
                     }
 
                     Subway subway = new DefaultSubway();

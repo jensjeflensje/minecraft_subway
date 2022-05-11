@@ -6,7 +6,9 @@ import dev.jensderuiter.subway.component.SeatComponent;
 import dev.jensderuiter.subway.runner.SubwayRunner;
 import dev.jensderuiter.subway.track.PassingPoint;
 import dev.jensderuiter.subway.track.Track;
+import dev.jensderuiter.subway.util.SubwaySound;
 import org.bukkit.Location;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -50,6 +52,11 @@ public abstract class BaseSubway implements Subway {
     @Override
     public Track getTrack() {
         return this.track;
+    }
+
+    @Override
+    public SubwaySound getSound() {
+        return new SubwaySound(Sound.ENTITY_MINECART_INSIDE, 5f, 0) ;
     }
 
     @Override
