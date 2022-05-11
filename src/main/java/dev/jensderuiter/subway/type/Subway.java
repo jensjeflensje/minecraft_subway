@@ -3,7 +3,9 @@ package dev.jensderuiter.subway.type;
 import dev.jensderuiter.subway.component.Component;
 import dev.jensderuiter.subway.track.PassingPoint;
 import dev.jensderuiter.subway.track.Track;
+import dev.jensderuiter.subway.util.SubwaySound;
 import org.bukkit.Location;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -13,6 +15,8 @@ public interface Subway {
 
     float getSpeed();
     void setSpeed(float speed);
+
+    SubwaySound getSound();
 
     PassingPoint getNextPoint();
     void setNextPoint(PassingPoint location);
