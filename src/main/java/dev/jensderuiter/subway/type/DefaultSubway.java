@@ -24,6 +24,7 @@ public class DefaultSubway extends BaseSubway {
         addComponent("seat1", new SeatComponent(new Offset(0, 1.3, 0.8, 0, 0)));
         addComponent("seat2", new SeatComponent(new Offset(0, 1.3, -0.1, 0, 0)));
         addComponent("seat3", new SeatComponent(new Offset(0, 1.3, -1, 0, 0)));
+        addComponent("seat3", new SeatComponent(new Offset(0, 1.3, -1.8, 0, 0)));
 
         // THE OBJECT: front
         addComponent("front_base_1_1", new BaseComponent(Concrete.LIGHT_GRAY.item, new Offset(0, -0.13, 1.5, 0, 180)));
