@@ -3,6 +3,7 @@ package dev.jensderuiter.subway.type;
 import dev.jensderuiter.subway.component.Component;
 import dev.jensderuiter.subway.track.PassingPoint;
 import dev.jensderuiter.subway.track.Track;
+import dev.jensderuiter.subway.util.Concrete;
 import dev.jensderuiter.subway.util.SubwaySound;
 import org.bukkit.Location;
 import org.bukkit.Sound;
@@ -15,6 +16,11 @@ public interface Subway {
 
     float getSpeed();
     void setSpeed(float speed);
+
+    void setBaseColor(Concrete color);
+    void setColor(Concrete color);
+    Concrete getColor();
+    Concrete getBaseColor();
 
     SubwaySound getSound();
 

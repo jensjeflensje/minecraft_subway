@@ -6,6 +6,7 @@ import dev.jensderuiter.subway.component.SeatComponent;
 import dev.jensderuiter.subway.runner.SubwayRunner;
 import dev.jensderuiter.subway.track.PassingPoint;
 import dev.jensderuiter.subway.track.Track;
+import dev.jensderuiter.subway.util.Concrete;
 import dev.jensderuiter.subway.util.SubwaySound;
 import org.bukkit.Location;
 import org.bukkit.Sound;
@@ -24,11 +25,30 @@ public abstract class BaseSubway implements Subway {
     List<BukkitTask> tasks = new ArrayList<>();
     public float speed = 0.2f;
 
+    public Concrete color = Concrete.GRAY;
+    public Concrete baseColor = Concrete.GRAY;
+
     @Override
     public void summon(Location location) {
         this.location = location;
         uuid = UUID.randomUUID();
         SubwayPlugin.subwayMap.put(uuid, this);
+    }
+
+    public void setColor(Concrete color) {
+        this.color = color;
+    }
+
+    public Concrete getColor() {
+        return color;
+    }
+
+    public void setBaseColor(Concrete color) {
+        this.baseColor = color;
+    }
+
+    public Concrete getBaseColor() {
+        return baseColor;
     }
 
     @Override
