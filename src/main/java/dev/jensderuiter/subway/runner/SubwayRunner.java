@@ -74,10 +74,15 @@ public class SubwayRunner extends BukkitRunnable {
             this.aimedYaw = (float) (Math.atan2(vector.getZ(), vector.getX()) * 180 / Math.PI) - 90;
             if (this.currentYaw == -420) this.currentYaw = aimedYaw;
             if (this.currentYaw + TURNSPEED < aimedYaw) {
-                if (this.currentYaw < -180) this.currentYaw = 90;
                 this.currentYaw += TURNSPEED;
             } else if (this.currentYaw - TURNSPEED > aimedYaw) {
                 this.currentYaw -= TURNSPEED;
+            }
+
+            float yawDiff = Math.abs(Math.abs(this.currentYaw) - Math.abs(this.aimedYaw));
+            System.out.println(yawDiff);
+            if (yawDiff > TURNSPEED * 10) {
+                this.currentYaw = aimedYaw;
             }
 
             // make the subway turn straight on straight movement
