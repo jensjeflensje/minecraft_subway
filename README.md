@@ -33,6 +33,41 @@ It was made with the default Minecraft texture pack in mind. Some texture packs 
 ### Permissions
 There's only one permission to configure subways: `subway.admin`. There will probably be other permissions later on.
 
+### Colored subways
+From version 1.2.0 and on, subways can be colored.
+Coloring can be done by setting `color` and `basecolor` inside the track configuration in the config.yml.
+An example configuration would be:
+```yaml
+test_track:
+    points:
+      # points
+    type: default
+    autospawn: true
+    speed: 0.2
+    color: LIGHT_BLUE
+    basecolor: WHITE
+```
+Which would make the subway look like this:
+![](https://files.jederu.nl/2022-05-16_10.36.46.png)
+
+#### Available colors
+- WHITE
+- ORANGE
+- MAGENTA
+- LIGHT_BLUE
+- YELLOW
+- LIME
+- PINK
+- GRAY
+- LIGHT_GRAY
+- CYAN
+- PURPLE
+- BLUE
+- BROWN
+- GREEN
+- RED
+- BLACK
+
 ### Contributing
 Feel free to contribute! It's very easy to add new trams/subways/vehicles to the system, so please do, and create a PR of course :).
 

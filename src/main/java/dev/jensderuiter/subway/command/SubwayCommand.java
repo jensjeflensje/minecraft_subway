@@ -63,6 +63,8 @@ public class SubwayCommand implements CommandExecutor {
                         trackSection = SubwayPlugin.instance.getConfig().createSection("tracks." + args[1] + ".points");
                         SubwayPlugin.instance.getConfig().set("tracks." + args[1] + ".type", "default");
                         SubwayPlugin.instance.getConfig().set("tracks." + args[1] + ".autospawn", false);
+                        SubwayPlugin.instance.getConfig().set("tracks." + args[1] + ".color", "LIGHT_GRAY");
+                        SubwayPlugin.instance.getConfig().set("tracks." + args[1] + ".basecolor", "LIGHT_GRAY");
                         SubwayPlugin.instance.getConfig().set("tracks." + args[1] + ".speed", 0.2);
                     }
 

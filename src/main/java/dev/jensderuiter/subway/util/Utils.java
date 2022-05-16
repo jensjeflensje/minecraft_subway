@@ -18,6 +18,8 @@ public class Utils {
     public static void summonSubwayOnTrack(Class<? extends Subway> subwayType, Track track) {
         try {
             Subway subway = subwayType.getConstructor().newInstance();
+            subway.setColor(track.color);
+            subway.setBaseColor(track.baseColor);
             subway.summon(track.passingPoints.get(0).location);
             subway.setSpeed(track.speed);
             subway.setTrack(track);
@@ -62,7 +64,13 @@ public class Utils {
             );
             passingPoints.add(new PassingPoint(point.getBoolean("stop"), location));
         }
-        return new Track(track, passingPoints, (float) trackSection.getDouble("speed"));
+        return new Track(
+                track,
+                passingPoints,
+                (float) trackSection.getDouble("speed"),
+                trackSection.getString("basecolor", ""),
+                trackSection.getString("color", "")
+        );
     }
 
 }

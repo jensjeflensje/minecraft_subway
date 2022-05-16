@@ -79,6 +79,7 @@ public class SubwayRunner extends BukkitRunnable {
                 this.currentYaw -= TURNSPEED;
             }
 
+            // correct current yaw if it's too far off aimed yaw
             float yawDiff = Math.abs(Math.abs(this.currentYaw) - Math.abs(this.aimedYaw));
             if (yawDiff > TURNSPEED * 10) {
                 this.currentYaw = aimedYaw;
